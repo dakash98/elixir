@@ -16,6 +16,14 @@ defmodule Number do
     rem(num, 2) === 0
   end
 
+  defp find_largest_num(num_list) do
+    Enum.max(num_list)
+  end
+
+  defp find_smallest_num(num_list) do
+    Enum.min(num_list)
+  end
+
   def is_prime?(num) do
     cond do
       num <= 0 -> false
@@ -38,5 +46,9 @@ defmodule Number do
         palindromed_num = 100*third_num + second_num*10 + first_num
         palindromed_num === num
     end
+  end
+
+  def find_smallest_or_largest(num) do
+    "largest : #{find_largest_num(num)}, smallest : #{find_smallest_num(num)}"
   end
 end
