@@ -66,11 +66,13 @@ defmodule Pyramid do
   # 4 5 6
   # 7 8 9 10
   def pyramid_3(num) do
-    count = 1
-    last_val = 0
+    val = 0
     for i <- 1..num do
-      count = count + 1
-      IO.puts(i)
+      for n <- 1..i do
+        IO.write(val + i)
+        val = val + 1
+      end
+      IO.puts(" ")
     end
   end
 end
